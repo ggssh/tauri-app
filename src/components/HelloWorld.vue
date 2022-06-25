@@ -74,8 +74,11 @@
           console.log('cancelled');
         } else {
           // user selected a single file
-          console.log(selected);
-          const contents = await readTextFile(selected[0]).catch(err => console.log(err));
+          // console.log(selected[0]);
+          // for(let i = 0; i < selected.length; i++) {
+          //   console.log(selected[i]);
+          // }
+          const contents = await readTextFile(selected.replace("\\", "\\\\")).catch(err => console.log(err));
           this.file_content = contents;
         }
       }
