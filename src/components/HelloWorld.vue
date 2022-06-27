@@ -87,51 +87,21 @@
 </script>
 
 <template>
-
-
-  <!-- <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p> -->
-
-  <!-- <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Documentation
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
-  </p> -->
-
-  <div class="flex-col items-center">
-    <h1 class="flex items-center">{{ msg }}</h1>
-    <div class="flex-row justify-center ">
-      <button class="flex items-center" @click="count++">count is: {{ count }}</button>
-      <button class="flex items-center" type="button" @click="my_invoke">invoke me</button>
-      <button class="flex items-center" type="button" @click="get_vec">get_vec</button>
-      <button class="flex items-center" type="button" @click="get_map">get_map</button>
-      <button class="flex items-center" type="button" @click="open_file">open_file</button>
+  <div class="flex flex-col items-center">
+    <h1 class="text-center">{{ msg }}</h1>
+    <div class="flex">
+      <button class="btn" type="button" @click="count++">count is: {{ count }}</button>
+      <button class="btn" type="button" @click="my_invoke">invoke me</button>
+      <button class="btn" type="button" @click="get_vec">get_vec</button>
+      <button class="btn" type="button" @click="get_map">get_map</button>
+      <button class="btn" type="button" @click="open_file">open_file</button>
     </div>
     <p class="text-center">{{file_content}}</p>
   </div>
-
-  <!-- <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p> -->
 </template>
 
 <style scoped>
-  a {
-    color: #42b983;
-  }
-
   .btn {
-    @apply py-2 px-4 font-semibold rounded-lg shadow-md flex;
+    @apply py-2 px-4 font-semibold rounded-lg shadow-md max-w-max ml-5 mr-5;
   }
-
-  /* .btn-green {
-    @apply text-white bg-green-500 hover: bg-green-700;
-  } */
 </style>

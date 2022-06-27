@@ -23,25 +23,12 @@
     </div>
     <HelloWorld></HelloWorld>
   </div> -->
-  <div class="flex-col">
-    <div class="max-w-sm mx-auto flex justify-center">
-      <img class="h-20 " alt="Vue logo" src="./assets/logo.png" />
-    </div>
+  <div class="max-w-full mx-auto flex flex-col items-center">
+    <img alt="Vue logo" src="./assets/logo.png" />
 
-    <div class="max-w-sm mx-auto bg-white  flex  items-center">
-      <HelloWorld></HelloWorld>
-    </div>
+    <HelloWorld></HelloWorld>
   </div>
-
 </template>
 
 <style>
-  /* #app { */
-  /* font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
-  /* text-align: center; */
-  /* color: #2c3e50; */
-  /* margin-top: 60px; */
-  /* } */
 </style>
