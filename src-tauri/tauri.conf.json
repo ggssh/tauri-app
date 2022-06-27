@@ -49,8 +49,7 @@
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
-        "timestampUrl": "",
-        "webviewFixedRuntimePath": "./Microsoft.WebView2.FixedVersionRuntime.102.0.1245.41.x64/"
+        "timestampUrl": ""
       }
     },
     "security": {

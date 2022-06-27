@@ -1,7 +1,74 @@
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+~~~json
+{
+  "$schema": "..\\node_modules/@tauri-apps/cli\\schema.json",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:9999",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "tauri-app",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true,
+      "fs": {
+        "scope": [
+          "**"
+        ]
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "com.ggssh.tauri-app",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": "",
+        "webviewFixedRuntimePath": "./Microsoft.WebView2.FixedVersionRuntime.102.0.1245.41.x64/"
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 600,
+        "resizable": true,
+        "title": "Tauri App",
+        "width": 800
+      }
+    ]
+  }
+}
+~~~
