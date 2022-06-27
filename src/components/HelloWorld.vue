@@ -78,7 +78,7 @@
           // for(let i = 0; i < selected.length; i++) {
           //   console.log(selected[i]);
           // }
-          const contents = await readTextFile(selected.replace("\\", "\\\\")).catch(err => console.log(err));
+          const contents = await readTextFile(selected).catch(err => console.log(err));
           this.file_content = contents;
         }
       }
@@ -87,7 +87,7 @@
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+
 
   <!-- <p>
     Recommended IDE setup:
@@ -104,14 +104,18 @@
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
   </p> -->
 
-  <div id="d1">
-    <button type="button" @click="count++">count is: {{ count }}</button>
-    <button type="button" @click="my_invoke">invoke me</button>
-    <button type="button" @click="get_vec">get_vec</button>
-    <button type="button" @click="get_map">get_map</button>
-    <button type="button" @click="open_file">open_file</button>
+  <div class="flex-col items-center">
+    <h1 class="flex items-center">{{ msg }}</h1>
+    <div class="flex-row justify-center ">
+      <button class="flex items-center" @click="count++">count is: {{ count }}</button>
+      <button class="flex items-center" type="button" @click="my_invoke">invoke me</button>
+      <button class="flex items-center" type="button" @click="get_vec">get_vec</button>
+      <button class="flex items-center" type="button" @click="get_map">get_map</button>
+      <button class="flex items-center" type="button" @click="open_file">open_file</button>
+    </div>
+    <p class="text-center">{{file_content}}</p>
   </div>
-  <p>{{file_content}}</p>
+
   <!-- <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
@@ -122,4 +126,12 @@
   a {
     color: #42b983;
   }
+
+  .btn {
+    @apply py-2 px-4 font-semibold rounded-lg shadow-md flex;
+  }
+
+  /* .btn-green {
+    @apply text-white bg-green-500 hover: bg-green-700;
+  } */
 </style>
